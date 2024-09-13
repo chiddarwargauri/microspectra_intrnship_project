@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safari travel And Joyful Adventure</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"><span>T</span>ravel World</a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#book">book</a>
+        <a href="#packages">packages</a>
+        <a href="#services">services</a>
+        <a href="#gallery">gallery</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- login form container  -->
+
+<div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+
+    <form action="">
+        <h3>login</h3>
+        <input type="email" class="box" placeholder="enter your email">
+        <input type="password" class="box" placeholder="enter your password">
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have and account? <a href="#">register now</a></p>
+    </form>
+
+</div>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Find Your Best Holiday</h3>
+        <h3>adventure is worthwhile</h3>
+        <p>dicover new places with us, adventure awaits</p>
+        <a href="#" class="btn">discover more</a>
+    </div>
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="images/vid-1.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-2.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-3.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-4.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-5.mp4"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="images/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- book section starts  -->
+
+<section class="book" id="book">
+
+    <h1 class="heading">
+        <span>b</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>n</span>
+        <span>o</span>
+        <span>w</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/book-img.svg" alt="">
+        </div>
+
+        <form action="" name="google-sheet-book">
+
+            <div id="form_alerts"></div>
+            <div class="inputBox">
+                <h3>where to</h3>
+                <input type="text" placeholder="place name">
+            </div>
+            <div class="inputBox">
+                <h3>how many</h3>
+                <input type="number" placeholder="number of guests">
+            </div>
+            <div class="inputBox">
+                <h3>arrivals</h3>
+                <input type="date">
+            </div>
+            <div class="inputBox">
+                <h3>leaving</h3>
+                <input type="date">
+            </div>
+            <input type="submit" class="btn" value="book now">
+        </form>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+            const scriptURL_= 'https://script.google.com/macros/s/AKfycbxmHarJ1Z0h2ujdz5MTU30lC2zun0VynpGv2zuPlhPa-GFN48TuAEBDBsL-eatQRKwI/exec'
+            const form_= document.forms['google-sheet-books']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => $("#form_alerts").html("<div class='alert alert-success'>contact message send successfully.</div>"))
+                .catch(error =>  $("#form_alerts").html("<div class='alert alert-danger'>contact message not send .</div>"))
+            })
+          </script>
+    
+    </div>
+
+</section>
+
+<!-- book section ends -->
+
+<!-- packages section starts  -->
+
+<section class="packages" id="packages">
+
+    <h1 class="heading">
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/p-1.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> mumbai </h3>
+                <p>famous places to visit in mumbai-Elephanta Caves,Gateway of India,Marine Drive,Juhu Beach,Mahalaxmi Dhobi Ghat...Mumbai's most famous street food includes Vada Pav, bhelpuri, panipuri, sevpuri, Bombay sandwich, ragda-pattice, pav bhaji, omlette pav and kebabs. Among the popular desserts of Mumbai are Kulfi and Ice Gola.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> Rs.7500.00</div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-2.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> hawaii </h3>
+                <p> Famous places to visit in hawaii - Kailua, Kaneohe, Lahaina, Kapolei, Kahului, Makakilo, Wailuku, Waikiki Beach, Pearl Harbor, Hanauma Bay Nature Preserve, Volcanoes National Park, Haleakala ...Hawaii's most famous food Poke.
+                    Luau stew.
+                    Croissada.
+                    Chocolate haupia cream pie.
+                    Manapua.
+                    Loco moco.
+                    Saimin.
+                    Malasada. </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00 <span>$120.00</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-3.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> sydney </h3>
+                <p> Famous places to visit in sydney -Sydney Opera House,
+                    Sydney Harbour Bridge,
+                    Bondi Beach,
+                    The Rocks,
+                    Manly Ferry,
+                    Bronte Baths,
+                    Sydney Fish Market,
+                    Sydney shopping mall
+                    , sydney's most famous food-Barramundi.
+                    Sydney rock oyster,
+                    Australian prawns,
+                    Avocado on toast,
+                    Bacon and egg roll,
+                    Lamington cake,
+                    Potato cake,
+                    Yellowfin tuna etc.,
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00 <span>$120.00</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-4.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> paris </h3>
+                <p>Famous places to visit in Paris -Disneyland, Eiffel Tower, Louvre Museum, Notre Dame Cathedral, Arc de Triomphe, Montmartre, Palace of Versailles, Palais Garnier (The Opéra Garnier Grand Hall), Latin Quarter, Place de la Concorde, Sainte-Chapelle, Musee d'Orsay, Champs Elysées, Le Manoir de Paris, Place des Vosges, Bois de Vincennes, Musée Jacquemart- ...
+
+
+                     Paris's most famous food-1. Baguettes · 2. Croissants · 3. Macarons · 4. Eclairs · 5. French cheese · 6. Oysters · 7. Falafel · 8. Couscous.
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00 <span>$120.00</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-5.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Tokyo </h3>
+                <p>Famous places to visit in Tokyo -1. Shibuya Crossing · 2. Shinjuku Gyoen · 3. Harajuku · 4. Akihabara · 5. Tokyo Skytree · 6. Roppongi 
+                    Tokyo's most famous food-1. Sushi · 2. Ramen · 3. Japanese Curry · 4. Yakitori · 5. Wagyu Beef · 6. Tonkatsu · 7. Soba · 8. Tempura.
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00 <span>$120.00</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-6.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> egypt </h3>
+                <p>Famous places to visit in egypt-Pyramids of Giza, Karnak Temple and the Valley of the Kings, Islamic Cairo, the Nile at Aswan, Abu Simbel, Egyptian Museum, the White Desert, and the Siwa Oasis
+                    Egypt's most famous food-rice-stuffed vegetables and grape leaves, hummus, falafel, shawarma, kebab and kofta. ful medames, mashed fava beans; kushari, lentils and pasta; and molokhiya, bush okra stew.
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00 <span>$120.00</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- packages section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>affordable hotels</h3>
+            <p>We can provide all kind of hotels as per requiredment of customer. like simple affortable dilux, super dilux etc.,</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>food and drinks</h3>
+            <p>Our agency provide drinks for our visiters and customer if the coversation goes long more than 30 min then the agency provide food also.
+
+            </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>safty guide</h3>
+            <p>When customer wishes to travel at any place then our agency provide a safety guide  for your security and navigation</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-globe-asia"></i>
+            <h3>around the world</h3>
+            <p>A customer can travel any place around the world... </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-plane"></i>
+            <h3>fastest travel</h3>
+            <p>Our vehicle services are more effecient and super fast than any outher vehicle....  </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-hiking"></i>
+            <h3>adventures</h3>
+            <p>Through  our agency you can travel an amazing  adventure...</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- gallery section starts  -->
+
+<section class="gallery" id="gallery">
+
+    <h1 class="heading">
+        <span>g</span>
+        <span>a</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/g-1.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-2.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-3.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-4.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-5.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-6.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-7.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-8.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-10.jfif" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-11.jfif" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-12.jfif" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-13.jfif" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-14.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-15.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        
+       
+        <div class="box">
+            <img src="images/g-9.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- gallery section ends -->
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+    <h1 class="heading">
+        <span>r</span>
+        <span>e</span>
+        <span>v</span>
+        <span>i</span>
+        <span>e</span>
+        <span>w</span>
+    </h1>
+
+    <div class="swiper-container review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic1.jpeg" alt="" width="40%" >
+                    <h3>Nikita kale</h3>
+                    <p>It was my first time traveling with Trip Adviser. The firm specializes in expert-led cultural and gulet tours around Europe. The group size is small, the accommodations are nice, and the cuisine is delicious. Our professional guide was fantastic - passionate, educational, engaging, and amusing. The schedule was well-planned, mixing relaxation time with action and not-to-be-missed opportunities to swim in the Adriatic Sea from the gulet. The customer is clearly at the center of itinerary planning, and attention to detail is unparalleled. I would definitely suggest this organization to anybody looking for an enjoyable, relaxing, instructive vacation with good meals - they will not disappoint!</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic2.jpeg" alt="">
+                    <h3>Roshani Mahakal</h3>
+                    <p>Had a delightful experience with Girls around the Globe and travel team. Professional,friendly drivers along clean, comfortable cars. Highly recommended
+
+                        less
+                        </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic3.jpeg" alt="">
+                    <h3>Divya Kasture</h3>
+                    <p>We booked the 4D-3N tour. We were accomodated at the Kool Hotel. (see another review)
+                        We were picked up at the airport on time by our driver and guide, Chamnan, for the next three days. We were brought to our hotel. We could choose to just relax or start the tour immediately. I decided to visit Ankgor Wat first. Our guide had great knowledge and his English was good. An Australian guy I met at Angkor Wat even asked to join me cause he didn’t understand his guide and Chamnan he understood very well! ;) So the next two days the Australian guy accompagnied us.
+                        The first evening dinner was included: a buffet dinner. Meanwhile we could enjoy a Cambodian show. Afterwards the driver brought us back to the hotel.
+                        The next day we got up very early to see Angkor Wat by sunrise. A must-do!
+                        Afterwards we got back to the hotel to have breakfast (included) but if we wanted we could have had it elsewhere as well but my son loves a more Western breakfast, therefor we had it a the hotel.
+                        We visit two more tempels: Banteay Srei and Ta Phrom . Also waterfall, Kball Spean.
+                        We had lunch (included) in a place near one of the tempels.
+                        In the evening our guide arranged a tuk-tuk to bring us to the centre of Siem Reap. (Pub Street) It costs 5 dollar and the driver waited there untill we finished our dinner at the Red Piano. (See other review)
+                        The last day we changed guides. A pity cause I liked Chamnan but he had to do another booking.
+                        After breakfast (included) we went to the Tonlé Sap lake. We had an early lunch (included) at a restaurant and then we went to the last temple: Bayon Temple.
+                        We were back at the hotel around 3pm so lot’s of time to enjoy the pool.
+                        The next morning the driver brought us back to the airport.
+                        The service of Derleng Tours was spotless!</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic4.jpeg" alt="">
+                    <h3>Tanaya Mohale</h3>
+                    <p>
+                        MuninderS
+                        Birmingham, United Kingdom
+                        35
+                        Reviewed 9 September 2012
+                        RATHA SREY - SUPERB TOUR GUIDE
+                        I am writing this comment over a year after visiting Cambodia and having had RATHA SREY as my tour guide.
+                        
+                        I went with a UK company called SELECTIVE ASIA. With only 2 weeks to kill I wanted someone to show me this amazing county and reveal its colourful history.
+                        
+                        So why have I given this EXCELLENT? Ratha felt more like a close friend and aide rather than just a tour guide. He really knew his country well and the people also know him well.
+                        
+                        As a medical doctor I believe I have a critical outlook on assessing people and how they behave or perform. Ratha was attentive to my needs, keen to teach his country's history through travel and perhaps best of all, he was trustworthy.
+                        
+                        I really miss Cambodia and I do intend to return. When I do, I will only be arriving when RATHA is free.
+                        
+                        Whomever you do decide to travel with, if anybody, Cambodia is a place that you will never forget. Enjoy!</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+    
+    <h1 class="heading">
+        <span>c</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/contact-img.svg" alt="">
+        </div>
+
+        <form action="" name="google-sheet">
+
+        <div id="form_alerts"></div>
+            <div class="inputBox">
+                <input type="text" name="name" placeholder="name">
+                <input type="email" name="email" placeholder="email">
+            </div>
+            <div class="inputBox">
+                <input type="number"name="number" placeholder="number">
+                <input type="text" name="subject" placeholder="subject">
+            </div>
+            <textarea placeholder="message" name="message" id="" cols="30" rows="10"></textarea>
+            <input type="submit" class="btn" value="send message">
+        </form>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbw_J6JHzDVquLPXoE5oWp49T3HtnFf9UFM3ndbkDRc5mJeX-iROw1kcLjWrllbPxzEz/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => $("#form_alerts").html("<div class='alert alert-success'>contact message send successfully.</div>"))
+                .catch(error =>  $("#form_alerts").html("<div class='alert alert-danger'>contact message not send .</div>"))
+            })
+          </script>
+    </div>
+    
+</section>
+
+<!-- contact section ends -->
+
+<!-- brand section  -->
+<section class="brand-container">
+
+    <div class="swiper-container brand-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/6.jpg" alt=""></div>
+        </div>
+    </div>
+
+</section>
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>Safari travel and joyful adventure is a travel agency establish in 12/08/2022 ,who provides tourist transport like car ,coaches ,boats etc to tourist for transfer ,sight seeing and adventure</p>
+        </div>
+        <div class="box">
+            <h3>branch locations</h3>
+            <a href="#">india</a>
+            <a href="#">USA</a>
+            <a href="#">japan</a>
+            <a href="#">france</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">book</a>
+            <a href="#">packages</a>
+            <a href="#">services</a>
+            <a href="#">gallery</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> created by <span>Gauri Chiddarwar,roshni Mahakal ,Yukti Chavhan , Nikita kale</span> | all rights reserved! </h1>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
